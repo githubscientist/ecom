@@ -1,9 +1,38 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import LayoutWrapper from "./wrappers/LayoutWrapper";
+import { Children } from "react";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import productsLoader from "./loaders/units/productsLoader";
 
 const routes = [
   {
     path: "/",
-    element: <h1>Hello World!</h1>
+    element: <LayoutWrapper />,
+    children: [
+      {
+        path: "",
+        element: <Home />,
+        children: [
+          {
+            path: "products",
+            element: <Products />,
+            loader: productsLoader,
+            hydrateFallbackElement: <div>Loading...</div>,
+          }
+        ]
+      },
+      {
+        path: "register",
+        element: <Register />
+      },
+      {
+        path: "login",
+        element: <Login />
+      }
+    ]
   }
 ];
 

@@ -6,8 +6,13 @@ const productRouter = require('./routes/productRoutes');
 const unknownEndpoint = require('./utils/Error');
 const orderRouter = require('./routes/orderRoutes');
 const userRouter = require('./routes/userRoutes');
+const cors = require('cors');
 
 const app = express();
+app.use(cors({
+    origin: 'http://localhost:5173',
+    credentials: true
+}));
 
 app.use(express.json());
 app.use(cookieParser());
