@@ -105,3 +105,107 @@ List of technologies used to develop a web application covering all the componen
 - Checkout/Place Order
   - Create an API to place an order
   - Create a page to place an order
+
+### Backend API Routes
+
+#### Auth routes
+
+POST /api/v1/auth/register
+POST /api/v1/auth/login
+GET /api/v1/auth/logout
+GET /api/v1/auth/me
+
+#### Product routes
+
+#### Allowed for Users
+
+GET /api/v1/products
+GET /api/v1/products/:id
+
+#### Allowed for Admin
+
+POST /api/v1/products
+PUT /api/v1/products/:id
+DELETE /api/v1/products/:id
+
+#### Order routes
+
+##### Allowed only for Admin
+
+GET /api/v1/orders
+GET /api/v1/orders/:id
+PUT /api/v1/orders/:id
+DELETE /api/v1/orders/:id
+
+#### Allowed for User
+
+POST /api/v1/orders
+PUT /api/v1/orders/:id - Cancel Order
+
+#### User routes
+
+##### Allowed only for Admin
+
+GET /api/v1/users
+GET /api/v1/users/:id
+PUT /api/v1/users/:id
+DELETE /api/v1/users/:id
+
+Product Schema
+
+```json
+{
+  "name": "string",
+  "description": "string",
+  "price": "number",
+  "image": "string",
+  "category": "string",
+  "stock": "number"
+}
+```
+
+Example Data:
+
+```json
+{
+  "name": "Laptop",
+  "description": "Lenovo Laptop",
+  "price": 50000,
+  "image": "laptop.jpg",
+  "category": "Electronics",
+  "stock": 10
+}
+```
+
+```json
+{
+  "name": "Mobile",
+  "description": "OnePlus Mobile",
+  "price": 30000,
+  "image": "mobile.jpg",
+  "category": "Electronics",
+  "stock": 20
+}
+```
+
+```json
+{
+  "name": "Shirt",
+  "description": "Peter England Shirt",
+  "price": 2000,
+  "image": "shirt.jpg",
+  "category": "Clothing",
+  "stock": 30
+}
+```
+
+```json
+{
+  "name": "Shoes",
+  "description": "Nike Shoes",
+  "price": 5000,
+  "image": "shoes.jpg",
+  "category": "Footwear",
+  "stock": 40
+}
+```
