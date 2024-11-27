@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 const Home = () => {
     return (
         <div className="container mx-auto mt-8 text-center">
-            <h1 className="text-4xl text-gray-800">Welcome to the Ecom App</h1>
+            <h1 className="text-4xl text-gray-800">Welcome to the Ecom App!</h1>
 
             <h3 className="text-2xl text-gray-600 mt-4">Please register or login to Buy Products</h3>
 
