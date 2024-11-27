@@ -1,5 +1,5 @@
-const User = require('../models/user');
-const bcrypt = require('bcrypt');
+import User from '../models/user.js';
+import bcrypt from 'bcrypt';
 
 const userController = {
     getAllUsers: async (req, res) => {
@@ -83,4 +83,4 @@ const userController = {
     }
 }
 
-module.exports = userController;
+export default userController;

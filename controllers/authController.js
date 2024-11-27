@@ -1,7 +1,7 @@
-const User = require('../models/user');
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-const { JWT_SECRET } = require('../utils/config');
+import User from '../models/user.js';
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+import { JWT_SECRET } from '../utils/config.js';
 
 const authController = {
     register: async (req, res) => {
@@ -79,4 +79,4 @@ const authController = {
     }
 }
 
-module.exports = authController;
+export default authController;

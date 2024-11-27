@@ -1,6 +1,6 @@
-const express = require('express');
-const authController = require('../controllers/authController');
-const auth = require('../middlewares/auth');
+import express from 'express';
+import authController from '../controllers/authController.js';
+import auth from '../middlewares/auth.js';
 
 const authRouter = express.Router();
 
@@ -12,4 +12,4 @@ authRouter.post('/login', authController.login);
 authRouter.post('/logout', authController.logout);
 authRouter.get('/me', auth.checkAuth, authController.me);
 
-module.exports = authRouter;
+export default authRouter;

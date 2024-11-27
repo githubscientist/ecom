@@ -1,6 +1,6 @@
-const jwt = require('jsonwebtoken');
-const { JWT_SECRET } = require('../utils/config');
-const User = require('../models/user');
+import jwt from 'jsonwebtoken';
+import { JWT_SECRET } from '../utils/config.js';
+import User from '../models/user.js';
 
 const auth = {
     // Middleware to check if the user is authenticated
@@ -40,4 +40,4 @@ const auth = {
     }
 }
 
-module.exports = auth;
+export default auth;

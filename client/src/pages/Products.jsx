@@ -53,8 +53,8 @@ const Products = () => {
                     </button>
 
                     {
-                        // calculate the number of pages based on the total products
-                        Array.from({ length: Math.ceil(total / 5) }, (_, i) => i + 1).map((page) => (
+                        // check if total is a valid number
+                        Number.isFinite(total) && Array.from({ length: Math.ceil(total / 5) }, (_, i) => i + 1).map((page) => (
                             <button key={page} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4"
                                 onClick={updatePage}
                             >

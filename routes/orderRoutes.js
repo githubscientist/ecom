@@ -1,8 +1,8 @@
-const express = require('express');
-const orderController = require('../controllers/orderController');
-const orderRouter = express.Router();
-const auth = require('../middlewares/auth');
-
+// conver the above require to import
+import { Router } from 'express';
+import orderController from '../controllers/orderController.js';
+import auth from '../middlewares/auth.js';
+const orderRouter = Router();
 
 orderRouter.post('/', auth.checkAuth, orderController.createOrder);
 
@@ -11,4 +11,4 @@ orderRouter.get('/:id', auth.checkAuth, auth.allowRoles(['admin']), orderControl
 orderRouter.put('/:id', auth.checkAuth, auth.allowRoles(['admin']), orderController.updateOrder);
 orderRouter.delete('/:id', auth.checkAuth, auth.allowRoles(['admin']), orderController.deleteOrder);
 
-module.exports = orderRouter;
+export default orderRouter;

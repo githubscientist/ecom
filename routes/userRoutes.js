@@ -1,6 +1,7 @@
-const express = require('express');
-const userController = require('../controllers/userController');
-const auth = require('../middlewares/auth');
+import express from 'express';
+import userController from '../controllers/userController.js';
+import auth from '../middlewares/auth.js';
+
 const userRouter = express.Router();
 
 userRouter.get('/', auth.checkAuth, auth.allowRoles(['admin']), userController.getAllUsers);
@@ -9,4 +10,4 @@ userRouter.post('/', auth.checkAuth, auth.allowRoles(['admin']), userController.
 userRouter.put('/:id', auth.checkAuth, auth.allowRoles(['admin']), userController.updateUser);
 userRouter.delete('/:id', auth.checkAuth, auth.allowRoles(['admin']), userController.deleteUser);
 
-module.exports = userRouter;
+export default userRouter;

@@ -1,4 +1,4 @@
-const User = require('../models/user');
+import User from '../models/user.js';
 
 const cartController = {
     addToCart: async (req, res) => {
@@ -30,4 +30,4 @@ const cartController = {
     }
 }
 
-module.exports = cartController;
+export default cartController;

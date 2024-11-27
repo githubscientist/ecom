@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
-const { MONGODB_URI } = require('./utils/config');
-const app = require('./app');
+import mongoose from 'mongoose';
+import { MONGODB_URI } from './utils/config.js';
+import app from './app.js';
 
 mongoose.connect(MONGODB_URI)
     .then(

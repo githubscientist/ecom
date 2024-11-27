@@ -1,4 +1,4 @@
-const Order = require('../models/order');
+import Order from '../models/Order.js';
 
 const orderController = {
     getAllOrders: async (req, res) => {
@@ -68,4 +68,4 @@ const orderController = {
     },
 }
 
-module.exports = orderController;
+export default orderController;
