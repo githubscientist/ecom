@@ -26,7 +26,7 @@ const authController = {
             }
 
             await newUser.save();
-            return res.json({ message: 'User registered successfully' });
+            return res.status(201).json({ message: 'User registered successfully' });
         } catch (error) {
             return res.status(400).json({ message: error.message });
         }

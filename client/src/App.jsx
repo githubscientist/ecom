@@ -1,11 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LayoutWrapper from "./wrappers/LayoutWrapper";
-import { Children } from "react";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import productsLoader from "./loaders/units/productsLoader";
+import store from "./redux/app/store";
+import { Provider } from "react-redux";
 
 const routes = [
   {
@@ -49,12 +50,14 @@ const router = createBrowserRouter(routes, {
 
 const App = () => {
   return (
-    <RouterProvider
-      router={router}
-      future={{
-        v7_startTransition: true,
-      }}
-    />
+    <Provider store={store}>
+      <RouterProvider
+        router={router}
+        future={{
+          v7_startTransition: true,
+        }}
+      />
+    </Provider>
   )
 }
 
