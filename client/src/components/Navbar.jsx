@@ -7,8 +7,8 @@ const getNavigation = (user) => {
         // unauthenticated user
         return [
             { name: 'Home', href: '/', current: true },
-            { name: 'Register', href: '/register', current: false },
-            { name: 'Login', href: '/login', current: false },
+            // { name: 'Register', href: '/register', current: false },
+            // { name: 'Login', href: '/login', current: false },
         ]
     } else if (user.role === 'user') {
         return [

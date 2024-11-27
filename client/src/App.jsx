@@ -17,21 +17,21 @@ const routes = [
         element: <Home />,
         children: [
           {
-            path: "products",
+            path: "products/pages/:page",
             element: <Products />,
             loader: productsLoader,
             hydrateFallbackElement: <div>Loading...</div>,
+          },
+          {
+            path: "register",
+            element: <Register />
+          },
+          {
+            path: "login",
+            element: <Login />
           }
         ]
       },
-      {
-        path: "register",
-        element: <Register />
-      },
-      {
-        path: "login",
-        element: <Login />
-      }
     ]
   }
 ];
