@@ -8,7 +8,7 @@ const Home = () => {
             <h3 className="text-2xl text-gray-600 mt-4">Please register or login to Buy Products</h3>
 
             <div className="mt-8">
-                <Link to="/register" className="text-indigo-600 hover:underline">Register</Link> | <Link to="/login" className="text-indigo-600 hover:underline">Login</Link> | <Link to="/products" className="text-indigo-600 hover:underline">Browse Products</Link>
+                <Link to="/register" className="text-indigo-600 hover:underline">Register</Link> | <Link to="/login" className="text-indigo-600 hover:underline">Login</Link> | <Link to="/products/pages/1" className="text-indigo-600 hover:underline">Browse Products</Link>
             </div>
 
             <div className="mt-8">

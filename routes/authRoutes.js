@@ -9,7 +9,7 @@ authRouter.post('/register', authController.register);
 authRouter.post('/login', authController.login);
 
 // protected routes
-authRouter.post('/logout', auth.checkAuth, authController.logout);
+authRouter.post('/logout', authController.logout);
 authRouter.get('/me', auth.checkAuth, authController.me);
 
 module.exports = authRouter;

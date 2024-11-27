@@ -16,6 +16,18 @@ const userSchema = new mongoose.Schema({
     updatedAt: {
         type: Date,
         default: Date.now
+    },
+    cart: {
+        type: Array,
+        default: [
+            {
+                product: {
+                    type: mongoose.Schema.Types.ObjectId,
+                    ref: 'Product'
+                },
+                quantity: Number
+            }
+        ]
     }
 });
 

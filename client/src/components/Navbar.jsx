@@ -13,13 +13,13 @@ const getNavigation = (user) => {
     } else if (user.role === 'user') {
         return [
             { name: 'Dashboard', href: '/dashboard', current: true },
-            { name: 'Products', href: '/products', current: false },
-            { name: 'Cart', href: '/cart', current: false },
-            { name: 'Orders', href: '/orders', current: false },
+            { name: 'Products', href: '/dashboard/products/pages/1', current: false },
+            { name: 'Cart', href: '/dashboard/cart', current: false },
+            { name: 'Orders', href: '/dashboard/orders', current: false },
         ]
     } else if (user.role === 'admin') {
         return [
-            { name: 'Dashboard', href: '/admin/dashboard', current: true },
+            { name: 'Admin Dashboard', href: '/admin/dashboard', current: true },
             { name: 'Products', href: '/admin/products', current: false },
             { name: 'Orders', href: '/admin/orders', current: false },
             { name: 'Users', href: '/admin/users', current: false },
