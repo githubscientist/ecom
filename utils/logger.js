@@ -5,7 +5,7 @@ const requestLogger = (req, res, next) => {
     console.log('Query:', req.query);
     console.log('Params:', req.params);
     console.log('Cookies:', req.cookies);
-    console.log('-------------------');
+    console.log('------------------');
 
     next();
 }
